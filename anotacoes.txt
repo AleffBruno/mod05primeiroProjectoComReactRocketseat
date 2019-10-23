@@ -1,0 +1,41 @@
+criando o projeto {
+    $  yarn create react-app {NOME_DO_PROJETO}
+}
+
+roteamento {
+    $ yarn add react-router-dom
+    > cria-se um arquivo routes.js dentro de src ( veja o arquivo )
+    > cria-se uma pasta chamada pages dentro de src, onde ficara as paginas
+    > 'chama' o componente de rotas dentro de App.js ( veja o arquivo )
+}
+
+styled components {
+    > serve para estilizar os componentes dno react
+    $ yarn add styled-components
+    > instale a extensao no vsCode ( vscode-styled-components )
+    > cria-se estilos ( veja um exemplo em pages/main/style.js)
+    > Apos isso, se usa a tag criada no styledComponent ( veja o exemplo em pages/main/index.js )
+    > é possivel colocar atributos nos elementos a partir do styled components ( parecido com o attr do jQuery)
+    > & ( e comercial ) significa que se refere ao PROPRIO elemento (é como se fosse um 'this')
+    > animações {
+        importe { keyframes, css }, veja o exemplo em src/pages/main/style
+    }
+
+    estilos globais {
+        > cria-se uma pasta styles dentro de src, e dentro cria-se um arquivo global.js ( veja o arquivo )
+        > apos isso, se importa dentro de App.js ( veja o arquivo )
+    }
+}
+
+icones {
+    $ yarn add react-icons
+    > essa lib traz font-awesome, material icons, ionicons , etc...
+}
+
+requisições {
+    $ yarn add axios
+}
+
+debug react {
+    > procure na loja do google extensao no google Chorme : React Developer Tools
+}
