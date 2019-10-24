@@ -7,6 +7,7 @@ roteamento {
     > cria-se um arquivo routes.js dentro de src ( veja o arquivo )
     > cria-se uma pasta chamada pages dentro de src, onde ficara as paginas
     > 'chama' o componente de rotas dentro de App.js ( veja o arquivo )
+    > para enviar parametros nas rotas, se usa { Link }, e para acessa-los, é necessario 'pegar' no Componente que foi enviado o parametro a propriedade 'props.match', e dentro desse obj tem 'params', e é la que esta o valor
 }
 
 styled components {

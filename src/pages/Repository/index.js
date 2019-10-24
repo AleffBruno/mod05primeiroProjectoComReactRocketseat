@@ -1,7 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Repository() {
-    return <h1>Repository</h1>
+import api from '../../services/api';
+
+export default class Repository extends Component {
+    state = {
+        repository: {},
+        issues: [],
+        loading: true,
+    }
+    
+    async componentDidMount() {
+        const { match } = this.props;
+
+        const repoName = decodeURIComponent(match.params.repository);
+
+        const [repository, issues] = await Promise.all([
+            api.get(`repos/${repoName}`),
+            api.get(`repos/${repoName}/issues`,{
+                params: {
+                    status: 'open',
+                    per_page: 5
+                }
+            })
+        ]);
+
+        this.setState({
+            repository: repository.data,
+            issues: issues.data,
+            loading: false
+        })
+
+        console.log(repository)
+        console.log(issues)
+    }
+
+    render() {
+        return (
+            <h1>Repository: </h1>
+        )
+    }
+    
 }
-
-export default Repository;
