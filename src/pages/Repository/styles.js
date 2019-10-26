@@ -42,6 +42,27 @@ export const Owner = styled.div`
     }
 `;
 
+export const StyledButton = styled.button.attrs(props => ({
+    disabled: props.disablePrevButton
+}))`
+
+    background: #7159c1;
+    color: white;
+    border: 0;
+    padding: 0 15px;
+    margin-left: 10px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+`
+
 export const IssueList = styled.ul`
     padding-top: 30px;
     margin-top: 30px;
